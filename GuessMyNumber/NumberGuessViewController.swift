@@ -1,33 +1,33 @@
 //
-//  ViewController.swift
+//  NumberGuessViewController.swift
 //  GuessMyNumber
 //
-//  Created by Brian Foutty on 5/9/23.
+//  Created by Brian Foutty on 5/10/23.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class NumberGuessViewController: UIViewController {
     
     // MARK: - IB Outlets
-    @IBOutlet weak var numberTextField: UITextField!
+    
+    
     
     // MARK: - Instance Properties
-
+    
     
     
     // MARK: - VDL
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view.
     }
     
     // MARK: - IB Actions
-    @IBAction func submitButtonTapped(_ sender: Any) {
-        
-    }
     
-    // MARK: - Segues
+    
+    
+    // MARK: - Instance Methods
 
 }
-
