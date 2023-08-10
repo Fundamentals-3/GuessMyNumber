@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RKg-OA-fVE">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -64,11 +64,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="857.25190839694653" y="1.4084507042253522"/>
+            <point key="canvasLocation" x="782" y="1"/>
         </scene>
         <!--Number Guess View Controller-->
         <scene sceneID="HQO-zh-Nix">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="06n-Kf-7mI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="vRK-TY-ZBB" customClass="NumberGuessViewController" customModule="GuessMyNumber" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="huR-NA-6yq">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
@@ -116,13 +117,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="zjb-wh-G2J"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="06n-Kf-7mI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1598" y="1"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="zj7-RM-9JN">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gtJ-Pw-wLv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RKg-OA-fVE" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="q1a-eQ-V77">
@@ -134,7 +135,6 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="KWg-UJ-acX"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gtJ-Pw-wLv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-69.465648854961827" y="1.4084507042253522"/>
         </scene>
