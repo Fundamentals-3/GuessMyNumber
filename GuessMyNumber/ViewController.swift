@@ -14,7 +14,11 @@ class ViewController: UIViewController {
     // #2
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var hintLabel: UILabel!
-    @IBOutlet weak var numberTextField: UITextField!
+    @IBOutlet weak var playerGuessTextField: UITextField!
+    @IBOutlet weak var previousGuessLabel: UILabel!
+    // #31
+    @IBOutlet weak var submitButton: UIButton!
+    @IBOutlet weak var playAgainButton: UIButton!
     
     // MARK: - Instance Properties
     // #3
@@ -29,10 +33,17 @@ class ViewController: UIViewController {
         // #26
         scoreLabel.text = ""
         hintLabel.text = ""
+        previousGuessLabel.text = ""
         
         // #7
         generateRandomNumber()
         // #8
+        
+        // #32
+        submitButton.isEnabled = true
+        submitButton.isHidden = false
+        playAgainButton.isEnabled = false
+        playAgainButton.isHidden = true
         
     }
     
@@ -41,6 +52,13 @@ class ViewController: UIViewController {
     @IBAction func submitButtonTapped(_ sender: Any) {
         // #24
         checkNumber()
+        playerGuessTextField.text?.removeAll()
+        
+    }
+    // #29
+    @IBAction func playAgainButtonTapped(_ sender: Any) {
+        // #30
+        playAgain()
     }
     
     // MARK: - Instance Methods
@@ -54,7 +72,7 @@ class ViewController: UIViewController {
     // #9
     func getGuessedNumber() -> Int? {
         // #10
-        guard let playerGuessText = self.numberTextField.text,
+        guard let playerGuessText = self.playerGuessTextField.text,
               // #11
               let playerGuess = Int(playerGuessText) else
         {
@@ -72,7 +90,7 @@ class ViewController: UIViewController {
         }
         
         return playerGuess // #14
-        // #15
+        // #15 & #16 - Build & run
     }
     
     // #19
@@ -82,30 +100,59 @@ class ViewController: UIViewController {
             
             // #21
             if playerGuess == randomNumber {
+                guesses += 1
                 hintLabel.text = "EXCELLENT! You guessed the number!🥳"
                 scoreLabel.text = "You guessed the number in \(guesses) guesses."
                 hintLabel.textColor = .blue
+                // #33
+                submitButton.isEnabled = false
+                submitButton.isHidden = true
+                playAgainButton.isEnabled = true
+                playAgainButton.isHidden = false
+                
             // #22
             } else if playerGuess > randomNumber {
                 guesses += 1
                 hintLabel.text = "⬇️ Your guess is greater than the number."
                 scoreLabel.text = ""
                 hintLabel.textColor = .black
+                previousGuessLabel.text = "You guessed \(playerGuess)"
             // #23
             } else {
                 guesses += 1
                 hintLabel.text? = "⬆️ Your guess is less than the number."
                 scoreLabel.text = ""
                 hintLabel.textColor = .black
-            } // #25
+                previousGuessLabel.text = "You guessed \(playerGuess)"
+                previousGuessLabel.text = "You guessed \(playerGuess)"
+            } // #25 - Build & run
         }
+    }
+    
+    // #29
+    func playAgain() {
+        generateRandomNumber()
+        guesses = 0
+        playerGuess = ""
+        scoreLabel.text = ""
+        hintLabel.text = ""
+        previousGuessLabel.text = ""
+        
+        playerGuessTextField.text?.removeAll()
+        
+        // #34
+        submitButton.isEnabled = true
+        submitButton.isHidden = false
+        playAgainButton.isEnabled = false
+        playAgainButton.isHidden = true
+        
     }
 }
 
 // #1  - Set up UI in Main.
 // #2 - Connect outlets in Assistant Editor.
 // #3 - Create three properties to store user guesses for score, a random number with a default value of any number, and a player guess which is an empty String since a textField which ALWAYS returns String. So, it must be a string.
-// #4 - Connect submit button in Assistant Editor.
+// #4 - Create an @IBAction for the Submit button in ViewController using the Assistant Editor.
 // #5 - Create a function to generate a random number between 1 and any other number. I used 100 so that game will not take too long to play.
 // #6 - Create a print statement to check that the generateRandomNumber() function works on 1st Build & Run.
 // #7 - Call generateRandomNumber() in ViewDidLoad() to generate the first random number upon game launch.
@@ -128,5 +175,15 @@ class ViewController: UIViewController {
 // #24 - Call checkNumber() in submitButtonTapped().
 // #25 - Build & Run. Play a few times. Ask for UI problems.
 // #26 - Assign the scoreLabel and hintLabel to blank Strings in the VDL so they are invsible.
-
-
+// #27 - Create a 'Play Again?' button in Main.
+// #28 - Create an @IBAction for the Play Again? button in ViewController using the Assistant Editor.
+// #29 - Create playAgain() function to reset the game. The function needs to:
+//      1. Generate a new random number.
+//      2. Reset 'guesses' to zero and playerGuess to an empty string.
+//      3. Set all three labels to be blank strings.
+//      4. Clear the playerGuessTextField.
+// #30 - Call playAgain() in playAgainButtonTapped().
+// #31 - Create outlets for both button so that we can hide and disable them until they are needed.
+// #32 - Enable and display the 'Submit' button and disable and hide the 'Play Again?' button in the ViewDidLoad() for the game launch by setting the appropriate Boolean values.
+// #33 - Disable and hide the 'Submit' button and enable and display the 'Play Again?' button in the first part of the conditional in checkNumber() for the two values being the same by setting the appropriate Boolean values.
+// #34 - Enable and display the 'Submit' button and disable and hide the 'Play Again?' button in playAgin() to reset the game by setting the appropriate Boolean values.
