@@ -69,6 +69,7 @@ class ViewController: UIViewController {
         print(randomNumber)
     }
     
+    /* #35 - Optional (😉😜) follow up lesson on why using optionals to write safe code is important.
     // #9
     func getGuessedNumber() -> Int? {
         // #10
@@ -91,12 +92,13 @@ class ViewController: UIViewController {
         
         return playerGuess // #14
         // #15 & #16 - Build & run
-    }
+    }*/
     
     // #19
     func checkNumber() {
         // #20
-        if let playerGuess = getGuessedNumber() {
+        // #36
+        if let playerGuess  = Int(playerGuessTextField.text!) {
             
             // #21
             if playerGuess == randomNumber {
@@ -187,3 +189,6 @@ class ViewController: UIViewController {
 // #32 - Enable and display the 'Submit' button and disable and hide the 'Play Again?' button in the ViewDidLoad() for the game launch by setting the appropriate Boolean values.
 // #33 - Disable and hide the 'Submit' button and enable and display the 'Play Again?' button in the first part of the conditional in checkNumber() for the two values being the same by setting the appropriate Boolean values.
 // #34 - Enable and display the 'Submit' button and disable and hide the 'Play Again?' button in playAgin() to reset the game by setting the appropriate Boolean values.
+// #35 - Comment out entire getGuessedNumber() method.
+// #36 - Rewrite line 101 to force unwrap the optional text value from the text field.
+// #37 - Build and run and tap 'Submit' button without entering a guess. Nothing happens. The user might think the app is doesn't work. 
