@@ -7,4 +7,3 @@ A single-view app that is a "Guess the Number" game built to give extra teaching
 5. Extra app building practice.
 6. Bonus content in unsafe optional branch: what happens when you force unwrap an optional with (!) and there is no value from user input.
 
-7. 
