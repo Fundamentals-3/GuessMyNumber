@@ -24,7 +24,7 @@
 		EB40BCDF2A0A9B7200EF1D3F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EB40BCE22A0A9B7200EF1D3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EB40BCE42A0A9B7200EF1D3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EBC17C542A8ACBB70016CFC6 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../../Downloads/README.md; sourceTree = "<group>"; };
+		EBAC45AC2A8B94E1008CB433 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../../Desktop/README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,7 +41,7 @@
 		EB40BCCA2A0A9B7000EF1D3F = {
 			isa = PBXGroup;
 			children = (
-				EBC17C542A8ACBB70016CFC6 /* README.md */,
+				EBAC45AC2A8B94E1008CB433 /* README.md */,
 				EB40BCD52A0A9B7000EF1D3F /* GuessMyNumber */,
 				EB40BCD42A0A9B7000EF1D3F /* Products */,
 			);
