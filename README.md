@@ -103,7 +103,7 @@ Use this space to list resources you find helpful and would like to give credit 
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
+[issues-shield]: https://img.shields.io/github/issues/Fundamentals-3/GuessMyNumber.svg?style=for-the-badge
 [issues-url]: https://github.com/Fundamentals-3/GuessMyNumber/issues
 [license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
 [license-url]: https://github.com/SwiftTeacher-Python/djangoBlog/blob/main/LICENSE
