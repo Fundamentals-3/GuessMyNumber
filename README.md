@@ -63,7 +63,7 @@ A single-view app that is a "Guess the Number" game built to give extra teaching
 
 
 
-See the [open issues](https://github.com/SwiftTeacher-Python/djangoBlog/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/Fundamentals-3/GuessMyNumber/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
