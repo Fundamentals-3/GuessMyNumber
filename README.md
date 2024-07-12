@@ -82,7 +82,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 Brian Foutty - [SwiftTeacher](https://www.threads.net/@swiftteacher) - brian@swiftteacher.org
 
-Project Link: [SwiftTeacher](https://github.com/SwiftTeacher-Python/djangoBlog)
+Project Link: [SwiftTeacher](https://github.com/Fundamentals-3/GuessMyNumber/blob/main/README.md)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
